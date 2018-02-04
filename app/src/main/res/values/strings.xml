@@ -2,4 +2,6 @@
     <string name="app_name">Widget</string>
     <string name="appwidget_text">PJATK</string>
     <string name="add_widget">Dodaj widget</string>
+    <string name="checkWeather">Sprawdź pogodę</string>
+    <string name="zdjecia">Zdjecia</string>
 </resources>

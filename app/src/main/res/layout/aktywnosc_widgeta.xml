@@ -4,18 +4,88 @@
     android:background="#09C"
     android:padding="@dimen/widget_margin">
 
-    <TextView
-        android:id="@+id/appwidget_text"
-        android:layout_width="wrap_content"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_margin="8dp"
-        android:background="#09C"
-        android:contentDescription="@string/appwidget_text"
-        android:text="@string/appwidget_text"
-        android:textColor="#ffffff"
-        android:textSize="24sp"
-        android:textStyle="bold|italic" />
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkWeather"
+            android:onClick="checkWeather"
+            android:id="@+id/btnCheckWeather"
+            android:layout_weight="0"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <ImageView
+        android:contentDescription="@string/zdjecia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_weight="1"
+        android:onClick="nextImage"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="0"
+        style="?android:attr/buttonBarStyle">
+        <Button
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnStart"
+            android:onClick="start"
+            android:drawableStart="@android:drawable/ic_media_play"
+            style="?android:attr/buttonBarButtonStyle"/>
+        <Button
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPause"
+            android:onClick="pause"
+            android:drawableStart="@android:drawable/ic_media_pause"
+            style="?android:attr/buttonBarButtonStyle"/>
+        <Button
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnStop"
+            android:onClick="stop"
+            android:drawableStart="@android:drawable/ic_delete"
+            style="?android:attr/buttonBarButtonStyle"/>
+        <Button
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnNext"
+            android:onClick="next"
+            android:drawableStart="@android:drawable/ic_media_next"
+            style="?android:attr/buttonBarButtonStyle"/>
+    </LinearLayout>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_weight="0.1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
 
 </RelativeLayout>
